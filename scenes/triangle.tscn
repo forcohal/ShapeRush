@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://m1rfdyfoi4p8"]
+
+[ext_resource type="Texture2D" uid="uid://c46r8u1ftm4ag" path="res://assets/shapes.png" id="1_yqcrn"]
+
+[node name="Triangle" type="Sprite2D" unique_id=1540224076]
+texture = ExtResource("1_yqcrn")
+region_enabled = true
+region_rect = Rect2(62.48825, 198.85524, 246.94147, 209.14476)

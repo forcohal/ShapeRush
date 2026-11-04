@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dyhkkxjxidfp5"]
+
+[ext_resource type="Texture2D" uid="uid://dp0o256qmo8mr" path="res://assets/bins.png" id="1_ojt5s"]
+
+[node name="BucketSquare" type="Sprite2D" unique_id=2090449291]
+texture = ExtResource("1_ojt5s")
+region_enabled = true
+region_rect = Rect2(304.28513, 0, 257.23074, 202.28499)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cjsoncyppse6j"]
+
+[ext_resource type="Texture2D" uid="uid://dp0o256qmo8mr" path="res://assets/bins.png" id="1_waata"]
+
+[node name="BucketStar" type="Sprite2D" unique_id=75714948]
+texture = ExtResource("1_waata")
+region_enabled = true
+region_rect = Rect2(299.14053, 195.49535, 257.23074, 202.28499)

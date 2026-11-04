@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctwi74rtcbwm4"]
+
+[ext_resource type="Texture2D" uid="uid://dp0o256qmo8mr" path="res://assets/bins.png" id="1_ywydo"]
+
+[node name="BucketTriangle" type="Sprite2D" unique_id=1645330271]
+texture = ExtResource("1_ywydo")
+region_enabled = true
+region_rect = Rect2(40.194916, 202.35481, 257.23074, 202.28499)

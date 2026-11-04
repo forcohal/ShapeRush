@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://vmvi6l46t6yc"]
+
+[node name="Score" type="Label" unique_id=780688900]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"

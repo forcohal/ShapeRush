@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://r83s4r0tm5sw"]
+
+[ext_resource type="Texture2D" uid="uid://dp0o256qmo8mr" path="res://assets/bins.png" id="1_mbvfn"]
+[ext_resource type="Script" uid="uid://bjkc6h6w7vw4q" path="res://scripts/bucket_circle.gd" id="2_tx5nl"]
+
+[node name="BucketCircle" type="Sprite2D" unique_id=1241238785]
+texture = ExtResource("1_mbvfn")
+region_enabled = true
+region_rect = Rect2(52.199005, 5.1445923, 257.23074, 202.28499)
+script = ExtResource("2_tx5nl")

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://yg7tqwtjxgui"]
+
+[ext_resource type="Texture2D" uid="uid://c46r8u1ftm4ag" path="res://assets/shapes.png" id="1_wcjn7"]
+
+[node name="Circle" type="Sprite2D" unique_id=737970375]
+texture = ExtResource("1_wcjn7")
+region_enabled = true
+region_rect = Rect2(95.83679, 10.623566, 185.20618, 186.92096)

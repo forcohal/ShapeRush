@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cj2bo1ilouuip"]
+
+[ext_resource type="Texture2D" uid="uid://c46r8u1ftm4ag" path="res://assets/shapes.png" id="1_mcqwg"]
+
+[node name="Star" type="Sprite2D" unique_id=1068984274]
+texture = ExtResource("1_mcqwg")
+region_enabled = true
+region_rect = Rect2(324.86356, 190.2809, 205.78464, 204.06975)

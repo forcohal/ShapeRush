@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dexpoa7qq4lkq"]
+
+[ext_resource type="Script" uid="uid://b6rlr4l8icdcw" path="res://scripts/star_falling.gd" id="1_sixcp"]
+[ext_resource type="PackedScene" uid="uid://cj2bo1ilouuip" path="res://scenes/star.tscn" id="2_41dt3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrn74"]
+radius = 63.07139
+
+[node name="StarFalling" type="Area2D" unique_id=1573482342]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_sixcp")
+
+[node name="Star" parent="." unique_id=1068984274 instance=ExtResource("2_41dt3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314559834]
+position = Vector2(-2, 4)
+shape = SubResource("CircleShape2D_xrn74")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

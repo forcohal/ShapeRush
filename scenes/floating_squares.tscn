@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c8nxy3w6d58nx"]
+
+[ext_resource type="Script" uid="uid://bnm1gy080p17b" path="res://scripts/floating_squares.gd" id="1_u0rsr"]
+
+[node name="FloatingSquares" type="Node2D" unique_id=1707550233]
+script = ExtResource("1_u0rsr")

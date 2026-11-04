@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://kpr0p1t377ck"]
+
+[ext_resource type="Texture2D" uid="uid://c46r8u1ftm4ag" path="res://assets/shapes.png" id="1_rb13l"]
+
+[node name="Square" type="Sprite2D" unique_id=1954373269]
+texture = ExtResource("1_rb13l")
+region_enabled = true
+region_rect = Rect2(305.99997, 0, 226.36307, 200.57011)

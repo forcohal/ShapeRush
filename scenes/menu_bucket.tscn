@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://crau1pdmxnupu"]
+
+[ext_resource type="Script" uid="uid://2sss2tchjvap" path="res://scripts/menu_bucket.gd" id="1_hxq1e"]
+[ext_resource type="PackedScene" uid="uid://ctwi74rtcbwm4" path="res://scenes/bucket_triangle.tscn" id="2_kswqg"]
+[ext_resource type="PackedScene" uid="uid://cjsoncyppse6j" path="res://scenes/bucket_star.tscn" id="3_ywaqe"]
+[ext_resource type="PackedScene" uid="uid://dyhkkxjxidfp5" path="res://scenes/bucket_square.tscn" id="4_jag0j"]
+[ext_resource type="PackedScene" uid="uid://r83s4r0tm5sw" path="res://scenes/bucket_circle.tscn" id="5_nb08o"]
+[ext_resource type="AudioStream" uid="uid://b3gi0ebr3ce78" path="res://assets/music/shiftbox.mp3" id="6_xs6xk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7dqa"]
+size = Vector2(141, 123.5)
+
+[node name="MenuBucket" type="Area2D" unique_id=1847543335 groups=["buckets"]]
+script = ExtResource("1_hxq1e")
+
+[node name="BucketTriangle" parent="." unique_id=1645330271 instance=ExtResource("2_kswqg")]
+visible = false
+position = Vector2(-12, 7)
+
+[node name="BucketStar" parent="." unique_id=75714948 instance=ExtResource("3_ywaqe")]
+visible = false
+position = Vector2(-13, -1)
+
+[node name="BucketSquare" parent="." unique_id=2090449291 instance=ExtResource("4_jag0j")]
+position = Vector2(-8, -4)
+
+[node name="BucketCircle" parent="." unique_id=1241238785 instance=ExtResource("5_nb08o")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521906853]
+position = Vector2(-5.5, 14.25)
+shape = SubResource("RectangleShape2D_k7dqa")
+
+[node name="ChangeSound" type="AudioStreamPlayer2D" parent="." unique_id=464186233]
+stream = ExtResource("6_xs6xk")

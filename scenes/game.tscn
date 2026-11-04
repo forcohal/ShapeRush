@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://b30pp8cuqbfyn"]
+
+[ext_resource type="Script" uid="uid://c8au0x8xmosv7" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://c8nxy3w6d58nx" path="res://scenes/floating_squares.tscn" id="2_ir15t"]
+[ext_resource type="PackedScene" uid="uid://di02vdw5nrqcv" path="res://scenes/bucket.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://hgn3s5vlup0k" path="res://scripts/shape_spawner.gd" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://dvtg254gw4lt7" path="res://scripts/error_flash.gd" id="4_lbhrr"]
+[ext_resource type="Shader" uid="uid://b6a2xghsxfncu" path="res://scripts/game.gdshader" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://b0o8mt55d4u8n" path="res://scripts/gray_scale_effect.gd" id="6_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://bdfmxtn6enxg6" path="res://assets/music/end1.mp3" id="7_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://om18tbe27rft" path="res://assets/music/game3.mp3" id="8_gee14"]
+[ext_resource type="AudioStream" uid="uid://dq2dbvqwtr6l1" path="res://assets/music/score5.mp3" id="9_kvpfn"]
+[ext_resource type="AudioStream" uid="uid://dm6okmsvft1td" path="res://assets/music/score5_2_1.mp3" id="10_dinhu"]
+[ext_resource type="AudioStream" uid="uid://hhedqndfywee" path="res://assets/music/score5_3.mp3" id="11_kvuet"]
+[ext_resource type="AudioStream" uid="uid://cu2i3udorkomo" path="res://assets/music/score1_2.mp3" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://dgyp5k5nlnrkk" path="res://scenes/game_ui.tscn" id="13_kvuet"]
+[ext_resource type="PackedScene" uid="uid://vmvi6l46t6yc" path="res://scenes/score.tscn" id="14_trtic"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xrn74"]
+shader = ExtResource("5_p57ef")
+shader_parameter/grayscale_amount = 0.0
+
+[node name="game" type="Node2D" unique_id=2021441911]
+script = ExtResource("1_lnu2h")
+
+[node name="Background" type="ColorRect" parent="." unique_id=145365312]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 855.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.557065, 0.9999998, 0.91426337, 1)
+
+[node name="FloatingSquares" parent="." unique_id=1707550233 instance=ExtResource("2_ir15t")]
+
+[node name="CircleBucket" parent="." unique_id=1847543335 instance=ExtResource("2_yqjtg")]
+position = Vector2(250, 777)
+
+[node name="ShapeSpawner" type="Node2D" parent="." unique_id=1747601776]
+script = ExtResource("3_lnu2h")
+
+[node name="ErrorFlash" type="ColorRect" parent="." unique_id=1205128339]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 854.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.8, 0, 0, 0)
+script = ExtResource("4_lbhrr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1055677325]
+
+[node name="GrayscaleEffect" type="ColorRect" parent="CanvasLayer" unique_id=1261518001]
+z_index = 100
+material = SubResource("ShaderMaterial_xrn74")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 480.0
+offset_bottom = 855.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_u5sy4")
+
+[node name="EndSound" type="AudioStreamPlayer2D" parent="." unique_id=1781166985]
+process_mode = 3
+stream = ExtResource("7_u5sy4")
+volume_db = 6.597
+
+[node name="GameMusic" type="AudioStreamPlayer2D" parent="." unique_id=596695746]
+process_mode = 3
+stream = ExtResource("8_gee14")
+
+[node name="ScoreSound1" type="AudioStreamPlayer2D" parent="." unique_id=1538811661]
+stream = ExtResource("9_kvpfn")
+volume_db = 10.0
+
+[node name="ScoreSound2" type="AudioStreamPlayer2D" parent="." unique_id=1095688928]
+stream = ExtResource("10_dinhu")
+volume_db = 15.0
+
+[node name="ScoreSound3" type="AudioStreamPlayer2D" parent="." unique_id=1049209047]
+stream = ExtResource("11_kvuet")
+volume_db = 10.0
+
+[node name="ScoreMusic" type="AudioStreamPlayer2D" parent="." unique_id=1083405009]
+stream = ExtResource("12_dinhu")
+
+[node name="GameUI" parent="." unique_id=1325225950 instance=ExtResource("13_kvuet")]
+
+[node name="Score" parent="." unique_id=780688900 instance=ExtResource("14_trtic")]
+offset_left = 434.0
+offset_top = 21.0
+offset_right = 474.0
+offset_bottom = 44.0
+theme_override_font_sizes/font_size = 25

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://1w8sqbvsnwmf"]
+
+[ext_resource type="Script" uid="uid://0twpqfgfjcx3" path="res://scripts/triangle_falling.gd" id="1_325ir"]
+[ext_resource type="PackedScene" uid="uid://m1rfdyfoi4p8" path="res://scenes/triangle.tscn" id="2_qwejo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrn74"]
+radius = 63.07139
+
+[node name="TriangleFalling" type="Area2D" unique_id=1573482342]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_325ir")
+
+[node name="Triangle" parent="." unique_id=1540224076 instance=ExtResource("2_qwejo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314559834]
+position = Vector2(-2, 4)
+shape = SubResource("CircleShape2D_xrn74")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

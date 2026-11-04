@@ -1,0 +1,7 @@
+# Godot generated files
+.godot/
+android/
+
+# Exported Android builds
+*.apk
+*.idsig

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dgvu1ptotxckw"]
+
+[ext_resource type="Script" uid="uid://bgp44cr1cvkiu" path="res://scripts/square_falling.gd" id="1_dqhdd"]
+[ext_resource type="PackedScene" uid="uid://kpr0p1t377ck" path="res://scenes/square.tscn" id="2_5k0q8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrn74"]
+radius = 63.07139
+
+[node name="SquareFalling" type="Area2D" unique_id=1573482342]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_dqhdd")
+
+[node name="Square" parent="." unique_id=1954373269 instance=ExtResource("2_5k0q8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314559834]
+position = Vector2(2, 7)
+shape = SubResource("CircleShape2D_xrn74")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

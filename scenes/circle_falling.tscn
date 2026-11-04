@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cw8ophqr8qfew"]
+
+[ext_resource type="PackedScene" uid="uid://yg7tqwtjxgui" path="res://scenes/circle.tscn" id="1_2l6xn"]
+[ext_resource type="Script" uid="uid://bvskivpxf16o5" path="res://scripts/circle_falling.gd" id="1_w2a2i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrn74"]
+radius = 63.07139
+
+[node name="CircleFalling" type="Area2D" unique_id=1573482342]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_w2a2i")
+
+[node name="Circle" parent="." unique_id=737970375 instance=ExtResource("1_2l6xn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1314559834]
+position = Vector2(-2, 4)
+shape = SubResource("CircleShape2D_xrn74")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
